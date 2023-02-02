@@ -23,10 +23,12 @@ Route::group(['middleware' => 'api','prefix' => 'auth'], function() {
     Route::post('register', 'App\Http\Controllers\AuthController@register');
     Route::post('logout', 'App\Http\Controllers\AuthController@logout');
     Route::post('refresh', 'App\Http\Controllers\AuthController@refresh');
-    Route::get('user-profile', 'App\Http\Controllers\AuthController@userProfile');
+    // Route::get('user-profile', 'App\Http\Controllers\AuthController@userProfile');
     Route::get('employees', 'App\Http\Controllers\EmployeeController@employeeInfo');
 });
 
 
 // public api
 // write your public api route
+Route::get('products', 'App\Http\Controllers\ProductController@products');
+
